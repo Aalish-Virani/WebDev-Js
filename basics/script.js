@@ -16,9 +16,10 @@ strToBool = Boolean(str);
 
 console.table([str, typeof strToBool, strToBool])
 
+let str1 = new String("Aalish")
+let str2 = new String("Virani")
 
-let str2 = "Virani"
-
-let str3 = {...str, ...str2}
+let str3 = new String(str1 + " " + str2)
 
 console.log(str3);
+
