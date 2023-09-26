@@ -19,6 +19,7 @@ const myCoding = [
     console.log(item.languageName);
   } )
   
+  
 
   
 
