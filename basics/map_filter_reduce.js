@@ -80,22 +80,22 @@ const myCoding = [
   const shoppingCart = [
       {
           itemName: "js course",
-          price: 2999,
+          price: 1000,
           selected: true
       },
       {
           itemName: "py course",
-          price: 999,
+          price: 500,
           selected: false
       },
       {
           itemName: "mobile dev course",
-          price: 5999,
+          price: 5000,
           selected: true
       },
       {
           itemName: "data science course",
-          price: 12999,
+          price: 2000,
           selected: false
       },
   ]
@@ -118,6 +118,9 @@ const myCoding = [
   console.log("\n\n\n");
 
 
+
+
+
 //  forEach  :  perform operations on array values
 
 shoppingCart .forEach((course) => console.log(course.price) )
@@ -127,13 +130,29 @@ shoppingCart .forEach((course) => console.log(course.price) )
 // const discounted_price = shoppingCart .forEach((course) => course.price*0.9 )
 
 
+
 //  Map :   return values to new array
 
-const discounted_price = shoppingCart .map((course) => course.price*0.9 )
+const discounted_price = shoppingCart.map((course) => course.price * 0.9 )
 
 
-const discounted_4_courses = discounted_price.reduce( (acc,course) => acc+course.price , 0) 
 
-console.log(`discounted price for selecting all courses : ${discounted_price}`)                                            
+// Reduce   :   return number i.e value after operation
 
-console.log(`discounted price for selecting all courses : ${discounted_4_courses}
+const discounted_4_courses = discounted_price.reduce( (acc,price) => acc+price , 0) 
+
+
+
+// Filter   :   return objects according to filter
+
+let priceFilter = shoppingCart.filter( (course) => course.price > 1000 )
+
+
+// doesnt work on array of object
+// console.log(`\n price over 1000 : ${priceFilter}`)
+
+console.log(priceFilter)
+
+console.log(`\n discounted price for courses : ${discounted_price}`)                                            
+
+console.log(`\n discounted price for selecting all 4 courses : ${discounted_4_courses}`)
