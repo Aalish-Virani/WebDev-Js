@@ -113,3 +113,27 @@ const myCoding = [
   console.log(`Service Charges : ${serviceCharges}`);
 
 
+
+
+  console.log("\n\n\n");
+
+
+//  forEach  :  perform operations on array values
+
+shoppingCart .forEach((course) => console.log(course.price) )
+
+//  forEach  :  does not return values
+
+// const discounted_price = shoppingCart .forEach((course) => course.price*0.9 )
+
+
+//  Map :   return values to new array
+
+const discounted_price = shoppingCart .map((course) => course.price*0.9 )
+
+
+const discounted_4_courses = discounted_price.reduce( (acc,course) => acc+course.price , 0) 
+
+console.log(`discounted price for selecting all courses : ${discounted_price}`)                                            
+
+console.log(`discounted price for selecting all courses : ${discounted_4_courses}
