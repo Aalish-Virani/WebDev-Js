@@ -12,8 +12,7 @@
       } else if (weight === "" || weight < 0 || isNaN(weight)) {
         results.innerHTML = `Please give a valid weight ${weight}`;
       } else {
-
-        const bmi = (weight / ( height * 0.3048 ) ).toFixed(2);
+        const bmi = (weight / ( height / 3.28 ) * ( height / 3.28 ) ).toFixed(2);
         results.innerHTML = `<span>${bmi}</span>`;
       }
     });
